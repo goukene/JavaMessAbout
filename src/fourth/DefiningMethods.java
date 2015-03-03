@@ -33,7 +33,7 @@ public class DefiningMethods {
 
     //Basics of function/method definition
 
-// ignore return type   name  parameter list
+// ignore, return type, name, parameter list
     static    int       add1(int p) {
         System.out.println("side effect");
 
@@ -61,10 +61,11 @@ public class DefiningMethods {
     }
 
     //homework
-    //1 define function that takes int N argument and prints '#' N times, eg printHash(4) -> prints #### (hint System.out.print())
-    //2 using the above, write a function that draws a triangle of size N eg...
+    // Q1 define function that takes int N argument and prints '#' N times, eg printHash(4) -> prints #### (hint System.out.print())
+    // Q2 using the above, write a function that draws a triangle of size N eg...
     //   #
     //   ##
     //   ###
     //   ####
+    //   #####
 }
