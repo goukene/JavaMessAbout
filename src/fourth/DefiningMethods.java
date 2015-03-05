@@ -30,7 +30,6 @@ public class DefiningMethods {
     }
 
 
-
     //Basics of function/method definition
 
 // ignore, return type, name, parameter list
@@ -68,4 +67,5 @@ public class DefiningMethods {
     //   ###
     //   ####
     //   #####
+
 }
