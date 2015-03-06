@@ -17,7 +17,6 @@ public class DefiningMethods {
 
         System.out.println(halveIt(7));
 
-
         //CASTING
         char another = (char)65;
         int intAnother = another;
@@ -28,7 +27,6 @@ public class DefiningMethods {
         int result = add(5, 4);
         System.out.println("add(5, 4) = " + result);
     }
-
 
     //Basics of function/method definition
 
