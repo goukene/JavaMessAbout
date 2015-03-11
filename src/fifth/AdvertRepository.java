@@ -7,10 +7,12 @@ public class AdvertRepository {
 
     private final List<Advert> advertsDatabase = new ArrayList<Advert>();
 
+    //Constructor
     public AdvertRepository() {
         initialiseDatabase();
     }
 
+    //initialising method called from constructor above to put 'data' into db
     private void initialiseDatabase() {
         Advert advert1 = new Advert("Ford Fiesta", 2000, "/image1", new String[]{"Electric windows", "Manual"}, "444-3456");
         Advert advert2 = new Advert("Ford Focus", 3000, "/image2", new String[]{"4 Doors", "Manual"}, "333-3456");
@@ -33,6 +35,8 @@ public class AdvertRepository {
         advertsDatabase.add(advert9);
     }
 
+
+    //get all adds to display in search results page
     public List<Advert> getAdverts() {
         return advertsDatabase;
     }
@@ -47,6 +51,7 @@ public class AdvertRepository {
         return adverts;
     }
 
+    //get a particular advert by id number to display in FPA
     public Advert getAdvertById(int id) {
         return advertsDatabase.get(id);
     }

@@ -7,6 +7,7 @@ public class Advert {
     private String [] advertBulletPoints;
     private String ownerPhoneNumber;
 
+    //constructor to set/initialise Advert attributes defined above.
     public Advert(String title, int price, String imageUri, String[] advertBulletPoints, String ownerPhoneNumber) {
         this.title = title;
         this.price = price;
