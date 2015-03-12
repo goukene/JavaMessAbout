@@ -24,17 +24,17 @@ public class Car {
         return numberOfDoors;
     }
 
-    public static Car newInstance(int numberOfSeats, int numberOfDoors, String colour) {
-        return new Car(numberOfSeats, numberOfDoors, colour);
-    }
+//    public static Car newInstance(int numberOfSeats, int numberOfDoors, String colour) {
+//        return new Car(numberOfSeats, numberOfDoors, colour);
+//    }
+//
+//    public static Car newRedCar(int numberOfSeats, int numberOfDoors) {
+//        return new Car(numberOfSeats, numberOfDoors, "Red");
+//    }
 
-    public static Car newRedCar(int numberOfSeats, int numberOfDoors) {
-        return new Car(numberOfSeats, numberOfDoors, "Red");
-    }
-
-    public static Car newTypicalCar() {
-        return new Car(5, 4, "Grey");
-    }
+//    public static Car newTypicalCar() {
+//        return new Car(5, 4, "Grey");
+//    }
 
     public String toString() {
         return "Car{" +
@@ -42,5 +42,10 @@ public class Car {
                 ", numberOfDoors=" + numberOfDoors +
                 ", colour='" + colour + '\'' +
                 '}';
+    }
+
+    public static void main(String[] args) {
+        Car car = new Car(5, 4, "red");
+        System.out.println(car);
     }
 }

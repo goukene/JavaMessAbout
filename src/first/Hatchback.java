@@ -3,19 +3,21 @@ package first;
 public class Hatchback extends Car {
 
     public Hatchback(String colour) {
-        this(3, colour);
+        super(4, 2, colour);
     }
 
-    public Hatchback(int numberOfDoors, String colour) {
-        super(4, numberOfDoors, colour);
+    public String toString() {
+        return "Hatchback{" +
+                "numberOfSeats=" + getNumberOfSeats() +
+                ", numberOfDoors=" + getNumberOfDoors() +
+                ", colour='" + getColour() + '\'' +
+                '}';
     }
 
     public static void main(String[] args) {
-        Car green = new Hatchback("Green");
+        Hatchback green = new Hatchback("Green");
 
-        Hatchback blue = new Hatchback(5, "Blue");
 
         System.out.println(green);
-        System.out.println(blue);
     }
 }
