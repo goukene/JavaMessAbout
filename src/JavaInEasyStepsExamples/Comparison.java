@@ -1,4 +1,4 @@
-package JavaInEasyStepsExamples;
+package javaInEasyStepsExamples;
 
 /**
  * Created by Robert.Chisholm on 08/03/2015.

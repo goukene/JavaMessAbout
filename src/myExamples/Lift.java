@@ -1,4 +1,4 @@
-package third;
+package myExamples;
 
 /**
  * Created by Robert.Chisholm on 01/03/2015.

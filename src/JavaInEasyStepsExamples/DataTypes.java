@@ -1,9 +1,10 @@
-package JavaInEasyStepsExamples;
+package javaInEasyStepsExamples;
 
 /**
  * Created by Robert.Chisholm on 08/03/2015.
  */
-class DataTypes {
+class DataTypes
+{
     public static void main ( String[] args )
     {
         char letter = 'M';
