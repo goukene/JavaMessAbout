@@ -4,6 +4,11 @@ package myExamples;
  * Created by robert.chisholm on 17/03/2015.
  */
 public class MoneyBox {
+
+    // add Map db
+
+    // Demostrate Interfaces for db, ie stub with map, another over mysql possibly.
+
     private int total = 0;
     private int overdraft = 100;
 
