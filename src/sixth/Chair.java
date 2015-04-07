@@ -1,6 +1,7 @@
 package sixth;
 
 public class Chair {
+
     private int numberOfLegs;
     private String colour;
 
