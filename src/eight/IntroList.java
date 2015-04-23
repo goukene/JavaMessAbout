@@ -1,5 +1,8 @@
 package eight;
 
+import ninth.Bucket;
+import ninth.QuantityOfWater;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +70,23 @@ public class IntroList {
 //            anotherList.add("hello");
 //            ++times;
 //        }
+
+
+        List<Bucket> buckets = new ArrayList<Bucket>();
+        buckets.add(new Bucket(200));
+        buckets.add(new Bucket(30));
+        buckets.add(new Bucket(100));
+        buckets.add(new Bucket(5));
+
+        QuantityOfWater water = new QuantityOfWater(30);
+
+        buckets.get(0).addWater(water);
+        buckets.get(1).addWater(water);
+        buckets.get(2).addWater(water);
+        buckets.get(3).addWater(water);
+
+
+
     }
 
 }
