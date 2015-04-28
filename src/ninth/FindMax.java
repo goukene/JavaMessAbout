@@ -34,4 +34,9 @@ public class FindMax {
        return max
      */
 
+    public static int findMin(int [] array) {
+        //implement me
+        return -1;
+    }
+
 }
