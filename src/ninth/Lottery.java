@@ -2,6 +2,7 @@ package ninth;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -14,8 +15,11 @@ public class Lottery {
 
     public static void main(String[] args) {
         Lottery lottery = new Lottery(6, 2);
-        ArrayList<Integer> lottoNumbers = lottery.pickBalls();
+        List<Integer> lottoNumbers = lottery.pickBalls();
+        List<Integer> bonusBalls = lottery.pickBonusBall(lottoNumbers);
         lottery.pickBonusBall(lottoNumbers);
+
+        lottery.showNumbers(lottoNumbers, bonusBalls);
     }
 
     public int getNoOfBonusBalls() {
@@ -27,25 +31,34 @@ public class Lottery {
         this.noOfBonusBalls = NoOfBonusBalls;
     }
 
-    public ArrayList pickBalls(){
+    public ArrayList<Integer> pickBalls(){
         ArrayList<Integer> lottoNumbers = new ArrayList<Integer>();
         int nextRandomNumber;
 
         while(lottoNumbers.size() < noOfLottoBalls){
             Random randomNumber = new Random();
             nextRandomNumber = Math.abs(1 + randomNumber.nextInt() % 48);
+
             if(!lottoNumbers.contains(nextRandomNumber)) {
                 lottoNumbers.add(nextRandomNumber);
             }
         }
         Collections.sort(lottoNumbers);
-        for (Integer num : lottoNumbers){
-            System.out.print("(" + num + "), ");
-        }
+
         return lottoNumbers;
     }
 
-    public void pickBonusBall(ArrayList<Integer> numbersSelected){
+    private void showNumbers(List<Integer> lottoNumbers, List<Integer> bonusBalls) {
+        for (Integer num : lottoNumbers){
+            System.out.print("(" + num + "), ");
+        }
+        System.out.print(" Bonus: ");
+        for (Integer bonusBall : bonusBalls) {
+            System.out.print("(" + bonusBall + ")");
+        }
+    }
+
+    public List<Integer> pickBonusBall(List<Integer> numbersSelected){
         Random random = new Random();
         ArrayList<Integer> randomBonusBalls = new ArrayList<Integer>();
 
@@ -56,10 +69,9 @@ public class Lottery {
             }
         }
         Collections.sort(randomBonusBalls);
-        System.out.print(" Bonus: ");
-        for (Integer bonusBall : randomBonusBalls) {
-            System.out.print("(" + bonusBall + ")");
-        }
+
+        return randomBonusBalls;
+
     }
 
 }
